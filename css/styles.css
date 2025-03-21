@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+  font-family: 'Poppins', sans-serif;  /* Usando Poppins como fonte */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/deathSlinger.png");
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lists-container {
+  display: flex;
+  gap: 40px;
+}
+
+.list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 600px;  /* Aumentado */
+  height: 85vh; /* Aumentado */
+  overflow-y: auto;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.8rem;  /* Aumentado */
+  color: black;  /* Vinho escuro */
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  align-items: center;  /* Alinha os itens (imagem e nome) verticalmente */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #a35858;  /* Efeito de hover com o fundo mais claro */
+}
+
+li img {
+  width: 120px;  /* Ajuste o tamanho da imagem conforme necessário */
+  height: 120px;
+  margin-right: 10px;  /* Espaço entre a imagem e o nome */
+}
+li span {
+  flex-grow: 1;  /* Faz o nome ocupar o espaço restante e ficar centralizado */
+  text-align: center;  /* Centraliza o texto dentro do espaço */
+}
+
+button {
+  background-color: #D72626; /* Vermelho vibrante */
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Aumentado */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #A81E1E; /* Vermelho escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lists-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .list {
+      width: 100%;
+      max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+      width: 100%;
+  }
+}
