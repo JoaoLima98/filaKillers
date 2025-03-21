@@ -121,6 +121,24 @@ function loadQueue() {
     queueList.appendChild(item);
   });
 }
+// Função para filtrar os killers
+function filterKillers() {
+  const searchQuery = document.getElementById("searchKiller").value.toLowerCase();  // Pega o valor do campo de pesquisa
+  const filteredKillers = availableKillers.filter(killer => killer.name.toLowerCase().includes(searchQuery));  // Filtra os killers pelo nome
+
+  // Limpa a lista antes de repopular
+  availableList.innerHTML = "";
+
+  // Recria os itens de lista com os killers filtrados
+  filteredKillers.forEach(killer => {
+    const item = createKillerItem(killer);
+    availableList.appendChild(item);
+  });
+}
+
+// Adiciona o evento de input para o campo de pesquisa
+document.getElementById("searchKiller").addEventListener("input", filterKillers);
+
 
 // Carrega a fila ao carregar a página
 loadQueue();

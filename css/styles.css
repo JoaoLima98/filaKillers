@@ -89,6 +89,30 @@ button:hover {
   background-color: #A81E1E; /* Vermelho escuro */
 }
 
+#searchKiller {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;  /* Tamanho máximo da barra de pesquisa */
+  padding: 10px;
+  margin-bottom: 20px;  /* Espaço entre a barra e a lista */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+#searchKiller:focus {
+  border-color: #D72626;  /* Cor do contorno quando o campo está em foco */
+  outline: none;
+}
+
+#searchKiller::placeholder {
+  color: #aaa;  /* Cor do texto de placeholder */
+  font-style: italic;
+}
 /* Responsividade */
 @media (max-width: 768px) {
   .lists-container {
